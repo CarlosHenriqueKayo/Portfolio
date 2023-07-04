@@ -1,0 +1,21 @@
+# Tabela "pokemons"
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS pokemons (
+        pokemon_id INTEGER PRIMARY KEY,
+        pokemon_name TEXT,
+        pokemon_type_id INTEGER
+    )
+''')
+
+# Tabela "types"
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS types (
+        type_id INTEGER PRIMARY KEY,
+        type TEXT
+    )
+''')
+
+# Salve as alterações
+conn.commit()
+
+
